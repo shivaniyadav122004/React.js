@@ -57,6 +57,7 @@
 
 //day-13
 //react hook form --09
+//install react hook form 
 //ui libraray-hamare ui ke liye components provide krti hai isme redimade code rehta hia or use hum use krte hai (like anti design website,) agar is use krna hia to pehle install krna hai or fir
 //react hook form ui libraries ke sath acche se kaam kr leta hia
 //useform ko import bhi krna pdhta hai tabhi react hook form kaam krega
@@ -72,3 +73,57 @@
 //fir jaha bhi error show krwana hai wha pr ye  lilkh denge --{error.name && error.name.type==="required"?(<p>this is name erorr<p/>):null} //iske liye hume input me  required ko bhi destructure krna pdhta hai jese -- {required:true ,minLength:6}
 
 //day-15
+//side effects-  ye ek cycle hai jisme teen steps hoti hai --1st mounting 2nd will mounting 3rd unmounting 
+//side effects ko handle krne ke liye useEffect hota hia 
+//useEffect me do cheeze hoti hai pehla call back or dusra dependency array or dependency array ke ander jo bhi state denge agr wo update hoti tb value chlegi or agar sirf ek baar chlana hai ek dependency arry ko blank chhor do [] 
+//useEffect(()=>{
+// console.log("hello")
+// },[])
+//useEffect me ek return bhi hota hia return ke ander hum ek function dete hai or usme hum jis bhi chhez ko htane chahhte hai wo likh dete hai --ye routing ke time kaam aayga 
+
+//day-16
+// Context api --ye ek global store bna deta hia jisme data globally store hota hia or koi bhi component wha se data le skte hai 
+//src ke ek file bnakr usme likhna hai createContext to hamara context bn jaayga or fir createcontext ko ek variable me store kr denge ,, let MyStore=createContext()
+//fir ye dukan ka naam ho gya ab hume dukan  bnani hai to uske liye 
+// const Dukan=({children})=>{
+//  let data="biscuit"
+//  return (
+//        <Mystore.Provider value={data}>
+//          {children}
+//         </Mystore.Provider>
+//  ) 
+//  }
+//or in sbko export bhi krna pdta hai 
+//fir apne main .jsx me app ko <Dukan> se wrap kr denge 
+// <Dukan> <App/> </Dukan>
+// or data key value pair me bhijta hai lekin ek hi value detea hai isliye agar hume bahut sara data bhejna ho to hum value me object bna denge jese value={{data,jankari}} or fir jise jaha use krna wo wha destructuring krke use kr lenge -- 
+// let {jankari}=useContext(dukan ka naam) //ye janakari wha ka koi sa data hai 
+//  console.log(jankari)
+// kisi bhi component me useContext lo call krke  hum data maangwa skte hai 
+
+
+//Router-dynamic routing 
+//declarative routing  pdhni hai 
+//
+
+//context api
+//statefull  component and stateless component
+//statefull==jisme koi data ya state ho and stateless ==jisme koi data ya state na ho
+
+//Memoization--unnecessary rerendering ko rokne ke liye hoti hai 
+//useMemo,Memo(react.memo),useCallback
+
+//redux
+//add redux dev tool in your chrome jisse redux ki cheeze dikhne lgengi 
+//install npm i redux toolkit termimal me
+//fir store bnana hai 
+//fir feature folder bna kr usme files bnaynge mtlb slice bnaynge alag alg kaam krwane ke liye
+//fir in slice ko store me register krenge reducer ke ander 
+//slice files jo bnnai hongi unme teen cheeze denge name ,initialState,reducers (reducers ke ander actions denge ) or fir inhe export kr denge 
+//app ko Provider se wrap kr denge pr usme store paas kr denge jisse app ko store ka access mil jaayga 
+//fir jaha bhi use krna hai hume to hum useSelector se use use kr lenge or fir dispatch se actions ko bhi use kr paaaynge 
+
+//tanStack query
+//agar api call krte hai to wo baar baar page rerender hone pr fir se call hoti hai to isse bachne ke liye hoti hai tenstack query ye ek variable me us data ko store kr leti hai or jitna hum time dete hai uske baad hi fir se call hogi to agar hum infinity time de de to wo kbhi call nhi hogi chahe hum rerender kre 
+//1. install npm i @tanStack/react-query 
+//2.fir 

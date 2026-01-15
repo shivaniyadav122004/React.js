@@ -41,10 +41,12 @@ const handleSubmit=(e)=>{
         <textarea  name="text" value={formdata.text} onChange={handleChange}  className="border p-3 w-50%  " type="text area" placeholder='description '></textarea>
         <button className='bg-green-400 border rounded-full w-30 ml-30' >Create note</button>
       </form>
-      
-        {data.map((elem)=>{
-          return <Notes elem={elem}/>
+      <div className='h-40 bg-red-300 gap-4'>
+          {data.map((elem,id)=>{
+          return <Notes key={id} elem={elem}></Notes>
         })}
+      </div>
+       
        
       </div>
   
